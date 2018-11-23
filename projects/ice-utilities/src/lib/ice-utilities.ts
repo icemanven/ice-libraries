@@ -20,7 +20,7 @@ export abstract class IceUtilities {
   static globals      = GlobalUtils;
   static localStorage = LocalStorageUtils;
   static login        = LoginUtils;
-  static Objects      = ObjectUtils;
+  static objects      = ObjectUtils;
   static router       = RouterUtils;
   static session      = SessionUtils;
   static strings      = StringUtils;
