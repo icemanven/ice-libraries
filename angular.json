@@ -133,6 +133,41 @@
           }
         }
       }
+    },
+    "ice-utilities": {
+      "root": "projects/ice-utilities",
+      "sourceRoot": "projects/ice-utilities/src",
+      "projectType": "library",
+      "prefix": "",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ice-utilities/tsconfig.lib.json",
+            "project": "projects/ice-utilities/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ice-utilities/src/test.ts",
+            "tsConfig": "projects/ice-utilities/tsconfig.spec.json",
+            "karmaConfig": "projects/ice-utilities/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ice-utilities/tsconfig.lib.json",
+              "projects/ice-utilities/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "ice-libraries"

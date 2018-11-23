@@ -16,6 +16,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "ice-utilities": [
+        "dist/ice-utilities"
+      ],
+      "ice-utilities/*": [
+        "dist/ice-utilities/*"
+      ]
+    }
   }
 }
