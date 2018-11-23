@@ -8,7 +8,9 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "iceutils": "ng build ice-utilities"
+    "iceutils": "ng build ice-utilities",
+    "npm-pack-iceutils": "cd dist/ice-utilities && npm pack",
+    "package-iceutils": "npm run iceutils && npm run npm-pack-iceutils"
   },
   "private": false,
   "dependencies": {
