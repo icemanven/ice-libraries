@@ -1,6 +1,6 @@
 {
   "name": "ice-libraries",
-  "version": "0.0.0",
+  "version": "0.0.5",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -10,7 +10,8 @@
     "e2e": "ng e2e",
     "iceutils": "ng build ice-utilities",
     "npm-pack-iceutils": "cd dist/ice-utilities && npm pack",
-    "package-iceutils": "npm run iceutils && npm run npm-pack-iceutils"
+    "package-iceutils": "npm run iceutils && npm run npm-pack-iceutils",
+    "deploy-iceutils": "npm run package-iceutils && cd dist/ice-utilities && npm publish --access public"
   },
   "private": false,
   "dependencies": {

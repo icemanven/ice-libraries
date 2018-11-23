@@ -1,5 +1,4 @@
 import {ArrayUtils} from './utilities/arrayUtils';
-import {BreadCumpUtils} from './utilities/breadCumpUtils';
 import {FechasUtils} from './utilities/fechasUtils';
 import {GlobalUtils} from './utilities/globalUtils';
 import {LocalStorageUtils} from './utilities/localStorageUtils';
@@ -10,11 +9,13 @@ import {SessionUtils} from './utilities/sessionUtils';
 import {StringUtils} from './utilities/stringUtils';
 import {TranslateUtils} from './utilities/translateUtils';
 import {IceUtilitiesData} from './interfaces/IceUtilitiesData';
+import {BreadCrumbUtils} from './utilities/breadCrumbUtils';
+import {DomElementUtils} from './utilities/domElementUtils';
 
 export abstract class IceUtilities {
   static arrays       = ArrayUtils;
-  static breadCumps   = BreadCumpUtils;
-  static domElements  = BreadCumpUtils;
+  static breadCrumbs  = BreadCrumbUtils;
+  static domElements  = DomElementUtils;
   static dates        = FechasUtils;
   static globals      = GlobalUtils;
   static localStorage = LocalStorageUtils;

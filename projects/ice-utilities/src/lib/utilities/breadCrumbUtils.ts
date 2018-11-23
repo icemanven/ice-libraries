@@ -1,17 +1,17 @@
 import {SessionUtils} from './sessionUtils';
 import {GlobalUtils} from './globalUtils';
 // @dynamic
-export abstract class BreadCumpUtils {
-  static getBreadCump (): string {
-    return SessionUtils.getSession('breadcump');
+export abstract class BreadCrumbUtils {
+  static getBreadCrumb (): string {
+    return SessionUtils.getSession('breadcrumb');
   }
-  static setBreadCump(value: string, isDinamic?: boolean): void {
+  static setBreadCrumb(value: string, isDinamic?: boolean): void {
     if (!isDinamic) {
       value = GlobalUtils.getSysname() + value;
     }
-    SessionUtils.setSession('breadcump', value);
+    SessionUtils.setSession('breadcrumb', value);
   }
-  static getPrinModFromBreadCump (value: string): string {
+  static getPrinModFromBreadCrumb (value: string): string {
     const search = value.split(/\//);
     return search[1];
   }
