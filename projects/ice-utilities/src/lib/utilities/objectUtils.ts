@@ -25,9 +25,7 @@ export abstract class ObjectUtils {
       newObj[prop] = +obj[prop];
     });
   }
-  static merge(obj1: object, obj2: object): object {
-    obj1 = obj1 || {};
-    obj2 = obj2 || {};
+  static merge(obj1 = {}, obj2 = {}): object {
     return {...obj1, ...obj2};
   }
 }
