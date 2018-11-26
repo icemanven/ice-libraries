@@ -1,5 +1,6 @@
 import {Base64} from './base64';
 import {DomSanitizer, SafeUrl} from '@angular/platform-browser';
+import {md5} from './md5';
 // @dynamic
 export abstract class StringUtils {
     private static sanitizer: DomSanitizer;
@@ -45,5 +46,8 @@ export abstract class StringUtils {
     }
     static bypassSecurityTrustUrl(text: string): SafeUrl {
         return this.sanitizer.bypassSecurityTrustUrl(text);
+    }
+    static toMd5(text: string): string {
+      return md5(text);
     }
 }
