@@ -26,6 +26,8 @@ export abstract class ObjectUtils {
     });
   }
   static merge(obj1: object, obj2: object): object {
+    obj1 = obj1 || {};
+    obj2 = obj2 || {};
     return {...obj1, ...obj2};
   }
 }

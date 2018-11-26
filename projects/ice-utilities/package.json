@@ -1,6 +1,6 @@
 {
   "name": "ice-utilities",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Utilities for manage arrays, breadcrumb, dom elements, dates, injectors, local storage, login, objects, router animations, router, session storage, strings and translate utilities, for angular 6+ with ECMAScript 6 - ECMAScript 2015",
   "author": "Jose Luis Quevedo Casanova",
   "keywords": [
