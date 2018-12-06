@@ -11,6 +11,7 @@ import {TranslateUtils} from './utilities/translateUtils';
 import {IceUtilitiesData} from './interfaces/IceUtilitiesData';
 import {BreadCrumbUtils} from './utilities/breadCrumbUtils';
 import {DomElementUtils} from './utilities/domElementUtils';
+import {EncryptUtils} from './utilities/encryptUtils';
 
 export abstract class IceUtilities {
   static arrays       = ArrayUtils;
@@ -25,6 +26,7 @@ export abstract class IceUtilities {
   static session      = SessionUtils;
   static strings      = StringUtils;
   static translate    = TranslateUtils;
+  static encryption   = EncryptUtils;
   static iniIceUtilities(data: IceUtilitiesData) {
     this.globals.setResponsiveWidth(data.responsiveWidth);
     this.globals.setTimeShow(data.timeshow);
@@ -35,5 +37,6 @@ export abstract class IceUtilities {
     this.router.setListDir(data.listDir);
     this.strings.setSanitizerInstance(data.sanitizer);
     this.translate.setTranlateInstance(data.translateService);
+    this.encryption.setKey(data.encryptionKey);
   }
 }

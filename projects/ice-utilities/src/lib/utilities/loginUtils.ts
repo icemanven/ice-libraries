@@ -1,13 +1,34 @@
 import {SessionUtils} from './sessionUtils';
 import {TranslateUtils} from './translateUtils';
 import notify from 'devextreme/ui/notify';
+import {EncryptUtils} from './encryptUtils';
+import {ObjectUtils} from './objectUtils';
+import {GlobalUtils} from './globalUtils';
 // @dynamic
 export abstract class LoginUtils {
+  private static LoginKey() {
+    if (EncryptUtils.hasEncryption()) {
+      return btoa(EncryptUtils.encrypt(this.getCurrentUser()));
+    } else {
+      return btoa(JSON.stringify(this.getCurrentUser()));
+    }
+  }
   static isLoggedin(): boolean {
-    return (SessionUtils.getSession('isLoggedin'));
+    let key: string;
+    if (EncryptUtils.hasEncryption()) {
+      key = EncryptUtils.decrypt(atob(SessionUtils.getSession('isLoggedin')));
+      return GlobalUtils.areEquals(key, this.getCurrentUser());
+    } else {
+      const log = SessionUtils.getSession('isLoggedin');
+      if (log === null) {
+        return false;
+      }
+      key = atob(log);
+      return GlobalUtils.areEquals(JSON.parse(key), this.getCurrentUser());
+    }
   }
   static setLoggedin(): void {
-    SessionUtils.setSession('isLoggedin', 'true');
+    SessionUtils.setSession('isLoggedin', this.LoginKey());
   }
   static logOff(): void {
     sessionStorage.clear();

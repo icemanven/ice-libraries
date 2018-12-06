@@ -11,6 +11,7 @@
     "iceutils": "ng build ice-utilities",
     "npm-pack-iceutils": "cd dist/ice-utilities && npm pack",
     "package-iceutils": "npm run iceutils && npm run npm-pack-iceutils",
+    "deploy-ini-iceutils": "cd dist/ice-utilities && npm publish --access public",
     "deploy-iceutils": "npm run package-iceutils && cd dist/ice-utilities && npm publish --access public"
   },
   "private": false,
@@ -28,7 +29,8 @@
     "rxjs": "~6.3.3",
     "zone.js": "~0.8.26",
     "@ngx-translate/core": "^11.0.1",
-    "devextreme": "^18.2.3"
+    "devextreme": "^18.2.3",
+    "simple-crypto-js": "^2.0.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.10.0",

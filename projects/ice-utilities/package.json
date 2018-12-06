@@ -1,7 +1,7 @@
 {
   "name": "ice-utilities",
-  "version": "0.0.9",
-  "description": "Utilities for manage arrays, breadcrumb, dom elements, dates, injectors, local storage, login, objects, router animations, router, session storage, strings and translate utilities, for angular 6+ with ECMAScript 6 - ECMAScript 2015",
+  "version": "0.0.10",
+  "description": "Utilities for manage arrays, breadcrumb, dom elements, dates, injectors, local storage, login, objects, router animations, router, session storage, strings and translate utilities, encryption, for angular 6+ with ECMAScript 6 - ECMAScript 2015",
   "author": "Jose Luis Quevedo Casanova",
   "keywords": [
     "jose luis quevedo casanova",
@@ -26,7 +26,8 @@
     "TYPESCRIPT",
     "venezuela",
     "colombia",
-    "library"
+    "library",
+    "encryption"
   ],
   "peerDependencies": {
     "@angular/animations": "~7.0.0",
@@ -42,6 +43,7 @@
     "rxjs": "~6.3.3",
     "zone.js": "~0.8.26",
     "@ngx-translate/core": "^11.0.1",
-    "devextreme": "^18.2.3"
+    "devextreme": "^18.2.3",
+    "simple-crypto-js": "^2.0.2"
   }
 }

@@ -12,4 +12,5 @@ export interface IceUtilitiesData {
   listDir?: string;
   sanitizer?: DomSanitizer;
   translateService?: TranslateService;
+  encryptionKey?: string;
 }
