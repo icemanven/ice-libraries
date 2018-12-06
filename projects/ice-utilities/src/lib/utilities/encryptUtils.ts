@@ -1,5 +1,5 @@
 import SimpleCrypto from 'simple-crypto-js/src/SimpleCrypto';
-
+// @dynamic
 export abstract class EncryptUtils {
   private static _key: string;
   private static _SimpleCrypto: any;
